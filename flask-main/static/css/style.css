@@ -1,0 +1,202 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*==================== CSS VARIABLES ====================*/
+:root{
+
+  /*========== Colors ==========*/
+  /* Change theme color */
+  --hue-color: 205;
+  /*Purple 250 - Green 142 - Blue 205 - Pink 340*/
+
+  /* HSL color mode */
+  --primary-background-color: hsl(var(--hue-color), 69%, 78%);
+  --secondary-background-color: hsl(var(--hue-color), 24%, 28%);
+  --image-preview-borders: hsl(var(--hue-color), 24%, 85%);
+  --links-hover: hsl(var(--hue-color), 24%, 80%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+}
+
+* {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: calc(100vh - 88px - 96px);
+}
+
+.navbar{
+  background-color: var(--secondary-background-color);
+}
+
+#motivation {
+  text-align: center;
+  margin: 30px 40px 20px 40px;
+}
+
+#colab {
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--secondary-background-color);
+}
+
+.footer-socials {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  flex-direction: row;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i {
+  font-size: 1.7rem;
+  transition: color .5s ease;
+}
+
+.socials a:hover i {
+  color: var(--links-hover);
+}
+
+.footer-copy {
+  font-family: var(--body-font);
+  display: flex;
+  text-align: center;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  font-size: var(--smaller-font-size);
+  margin-top: 0.15rem;
+}
+
+.footer-copy p a {
+  margin: auto;
+  text-decoration: none;
+  color: #fff;
+}
+
+.img-preview {
+  width: 256px;
+  height: 256px;
+  position: relative;
+  border: 5px solid var(--image-preview-borders);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.img-preview>div {
+  width: 100%;
+  height: 100%;
+  background-size: 256px 256px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
